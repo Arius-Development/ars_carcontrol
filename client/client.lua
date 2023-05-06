@@ -114,12 +114,17 @@ lib.registerRadial({
 
 
 lib.onCache('vehicle', function(value)
-    if not value then lib.removeRadialItem('doors') return end
-    if not value then lib.removeRadialItem('seats') return end
-    if not value then lib.removeRadialItem('windows') return end
-    if not value then lib.removeRadialItem('engine') return end
-    if not value then lib.removeRadialItem('hood') return end
-    if not value then lib.removeRadialItem('trunk') return end
+
+    if not value then
+        lib.removeRadialItem('doors') 
+        lib.removeRadialItem('seats')
+        lib.removeRadialItem('windows')
+        lib.removeRadialItem('engine')
+        lib.removeRadialItem('hood')
+        lib.removeRadialItem('trunk')
+        return 
+    end
+
 
     lib.addRadialItem({
         {
